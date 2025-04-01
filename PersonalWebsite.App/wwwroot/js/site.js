@@ -29,11 +29,58 @@
     });
 });*/
 
-document.addEventListener("DOMContentLoaded", function () {
-    const tl = gsap.timeline();
-    tl.to(".animated-text", { duration: 1, text: "シモネ"});
-    tl.to(".animated-text", { delay: 1, duration: 1, text: "Simone"});
-    tl.to(".animated-text", { delay: 1, duration: 1, text: "BeastOfShadow"});
+
+
+
+//document.addEventListener("DOMContentLoaded", function () {
+// const tl = gsap;
+// tl.to(".animated-text", { duration: 1, text: "Who am I?"});
+// tl.to(".elevation", { opacity: 1, duration: 1});
+// tl.to(".animated-text", { opacity: 1, duration: 1});
+/*tl.to(".animated-text", { delay: 1, duration: 1, text: "Simone"});
+tl.to(".animated-text", { delay: 1, duration: 1, text: "BeastOfShadow"});*/
+
+/*tl.to(".animated-text", { duration: 0.1, onComplete: () => {
+    document.querySelector(".animated-text").innerHTML += '<span class="blinking-dot">.</span>';
+
+    // Dopo che il punto è stato aggiunto, farlo lampeggiare
+    gsap.to(".blinking-dot", { opacity: 0, duration: 0.5, repeat: 8, yoyo: true });
+}});*/
+// });
+
+
+var map = L.map('map').setView([45.4654219, 9.1859243], 7); // Imposta la vista iniziale (Parigi)
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: ''
+}).addTo(map);
+
+/* Aggiungi marker per le città visitate
+var cities = [
+  { name: "London", lat: 51.507351, lng: -0.127758 },
+  { name: "Rome", lat: 41.9028, lng: 12.4964 },
+  { name: "New York", lat: 40.7128, lng: -74.0060 }
+];
+
+cities.forEach(city => {
+  L.marker([city.lat, city.lng]).addTo(map)
+    .bindPopup(`<b>${city.name}</b>`);
 });
+*/
+
+// Funzione per lo stile del poligono
+function style(feature) {
+  return {
+    color: 'rgba(0, 0, 0, 0.4)',            // Colore del contorno
+    weight: 2,                // Spessore del contorno
+    opacity: 1,               // Opacità del contorno
+    fillColor: 'rgba(130, 127, 127, 0.7)',       // Colore di riempimento
+    fillOpacity: 0.5          // Opacità di riempimento
+  };
+}
+
+L.geoJSON(window.geoJsonData, {
+  style: style
+}).addTo(map);
 
 

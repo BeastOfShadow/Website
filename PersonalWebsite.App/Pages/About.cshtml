@@ -1,0 +1,97 @@
+﻿@page
+@model PersonalWebsite.App.Pages.AboutModel
+@{
+    ViewData["Title"] = "About";
+}
+
+<div class="row mb-4 gradient">
+    <div class="col-lg-7">
+        <p class="big-title lh-less">SIMONE NEGRO</p>
+    </div>
+    <div class="col-12 col-lg-5 text-start text-lg-end">
+        <p class="fst-italic">
+            "Believing you're not good enough is the first step toward failure."
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-7">
+        <p></p>
+    </div>
+    <div class="col-lg-5">
+        <p class="light-c pt-1">INFO</p>
+        <p>
+            I am currently pursuing a degree in Computer Science at the University of Eastern Piedmont (UPO). Throughout
+            my studies, I have developed a strong foundation in programming, algorithms, and data structures, while also
+            exploring areas such as artificial intelligence and machine learning.
+        </p>
+        <p>
+            My academic journey continues to shape
+            my problem-solving abilities and my passion for technology, driving me to explore innovative solutions and
+            the potential of emerging technologies.
+        </p>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-lg-5 pe-3">
+        <p class="light-c pt-1">EDUCATION</p>
+        <p>
+            I am currently pursuing a degree in Computer Science at the University of Eastern Piedmont (UPO). Throughout
+            my studies, I have developed a strong foundation in programming, algorithms, and data structures, while also
+            exploring areas such as artificial intelligence and machine learning.
+        </p>
+        <p>
+            My academic journey continues to shape
+            my problem-solving abilities and my passion for technology, driving me to explore innovative solutions and
+            the potential of emerging technologies.
+        </p>
+    </div>
+    <div class="col-lg-7">
+        <p></p>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-lg-7">
+        <p></p>
+    </div>
+    <div class="col-lg-5">
+        <p class="light-c pt-1">INSIDE CODE</p>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-lg-5 pe-3">
+        <p class="light-c pt-1">LIFE OUTSIDE</p>@* Life Outside Code *@
+        <p>
+            Outside of my academic life, I have a deep passion for traveling, photography, and nature. The mountains and
+            natural landscapes are my greatest sources of inspiration. Traveling allows me to explore new places,
+            immerse myself in different cultures, and experience the beauty of nature firsthand. My camera is my
+            constant companion, helping me capture the tranquil moments and stunning views I encounter along the way.
+        </p>
+        <p>
+            Whether I’m hiking through the mountains or discovering new destinations, I find that nature and travel fuel
+            my creativity and offer endless opportunities for personal growth and reflection.
+        </p>
+    </div>
+    <div class="col-lg-7">
+
+    </div>
+</div>
+
+
+@*<p>aka ngr</p>*@
+
+<div id="map" style="height: 500px;"></div>
+
+<script>
+    window.geoJsonData = @Html.Raw(Model.GeoJsonData);
+</script>
