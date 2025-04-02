@@ -1,2 +1,0 @@
-# TicketShop
- Ticket Shop
